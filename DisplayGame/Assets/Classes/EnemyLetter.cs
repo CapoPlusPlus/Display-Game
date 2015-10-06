@@ -8,6 +8,7 @@ public class EnemyLetter : MonoBehaviour {
 	private GameObject thisMesh;
 	private Vector3 target;
 	private int Health = 3; 
+	
 
 	void Awake () {
 		thisMesh = Instantiate (letterMeshes[Random.Range (0, letterMeshes.Length)] , transform.position, Quaternion.identity) as GameObject;
@@ -22,11 +23,13 @@ public class EnemyLetter : MonoBehaviour {
 	void OnMouseDown() {
 		StartCoroutine (TakeDamage ());
 	}
-
+	
 	IEnumerator TakeDamage() {
 		Health--;
-		if (Health <= 0)
+		if (Health <= 0) {
+			GameObject.Find("Computer").GetComponent<Computer>().Score += 100;
 			Destroy (gameObject);
+		}
 		//Shake animation
 		float timer = 0f;
 		while (timer < .25f) {

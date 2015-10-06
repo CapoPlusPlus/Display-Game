@@ -4,14 +4,28 @@ using System.Collections;
 public class Computer : MonoBehaviour {
 
 	public GameObject PlayButton;
+	public TextMesh HighScore;
+	public TextMesh RecordScore;
 
 	private int Health = 10;
-	
+	public int Score;
+
+	void Awake () {
+
+	}
+
 	void Update () {
 		if (Health <= 0) {
+			//Set record score
+			if(Score > PlayerPrefs.GetInt("Record"))
+				PlayerPrefs.SetInt("Record", Score);
+
 			gameObject.GetComponent<PolygonCollider2D>().enabled = false;
 			Time.timeScale = 0;
+			transform.position = new Vector3(0,-4,0);
 			PlayButton.SetActive(true);
+			HighScore.text = "Highscore: " + Score.ToString();
+			RecordScore.text = "All Time High: " + PlayerPrefs.GetInt("Record");
 		}
 	}
 
