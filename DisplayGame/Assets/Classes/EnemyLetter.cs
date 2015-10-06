@@ -38,6 +38,6 @@ public class EnemyLetter : MonoBehaviour {
 	}
 	
 	void moveTowardsTarget () {
-		transform.position = Vector3.MoveTowards (transform.position, target, 1.25f * Time.deltaTime);
+		transform.position = Vector3.MoveTowards (transform.position, target, Random.Range(1f, 1.25f) * Time.deltaTime);
 	}
 }

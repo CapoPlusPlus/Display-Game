@@ -1,9 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Classes\Computer.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Classes/EnemyLetter.cs">
     <Files>
-      <File FileName="Assets\Classes\EnemyLetter.cs" Line="37" Column="4" />
-      <File FileName="Assets\Classes\Computer.cs" Line="20" Column="23" />
+      <File FileName="Assets/Classes/Computer.cs" Line="10" Column="1" />
+      <File FileName="Assets/Classes/EnemyLetter.cs" Line="33" Column="60" />
+      <File FileName="Assets/Classes/RunTime.cs" Line="8" Column="17" />
+      <File FileName="Assets/Classes/PlayButton.cs" Line="7" Column="50" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
