@@ -31,7 +31,7 @@ public class RunTime : MonoBehaviour {
 			timer += Time.deltaTime;
 			yield return null;
 		}
-		for(int i = 0; i < Random.Range (3,(WaveCount/2)*Random.Range (3,10)); i++) {
+		for(int i = 0; i < Random.Range (3,(WaveCount)*Random.Range (3,9)); i++) {
 			Instantiate(Enemy, new Vector3(Random.Range (-10,10), 6, 0), Quaternion.identity);
 		}
 		oneShot = true;
